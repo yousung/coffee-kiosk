@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div class="wrap">
+
+    <!-- container_main_start -->
+    <section class="container_main">
+        <div class="touch_box">
+            "화면을 클릭하세요."
+        </div>
+    </section>
+    <!-- container_main_end -->
+
+    <section class="container_select">
+        <header>
+            <img class="header_logo" src="../img/paul_logo_1.png" alt="헤더로고">
+        </header>
+
+        <nav>
+            <ul class="header_nav">
+                <li class="selected">신메뉴</li>
+                <li>커피</li>
+                <li>음료</li>
+                <li>푸드</li>
+                <li>아이스크림</li>
+            </ul>
+        </nav>
+
+        <div class="menu_area">
+            <div class="menu_box item_new"></div>
+            <div class="menu_box item_coffee"></div>
+            <div class="menu_box item_beverage"></div>
+            <div class="menu_box item_food"></div>
+            <div class="menu_box item_ice_cream"></div>
+        </div>
+
+        <div class="pay_information">
+            <div class="pay_left_area">
+
+                <div class="pay_head">주문내역</div>
+
+                <ul class="coffee_list">
+
+                </ul>
+
+                <div class="coffee_footer">
+                    <div class="footer_box footer_left">
+                        <div class="inner_left">총수량:</div>
+                        <div class="inner_right">0</div>
+                        <span>개</span>
+                    </div>
+                    <div class="footer_box footer_right">
+                        <div class="inner_left">총금액:</div>
+                        <div class="inner_right">0</div>
+                        <span>원</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pay_right_area">
+                주문하기
+            </div>
+        </div>
+
+
+
+
+
+        <!-- ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss -->
+        <div class="option_display_box option_design">
+
+            <h1>옵션선택</h1>
+            <ul>
+                <li><span>얼음</span><button class="option_button ice_select">많게</button><button class="option_button ice_select">적게</button><button class="ice_select">X</button></li>
+                <li><span>샷</span><button class="option_button shot_select">기본</button><button class="option_button shot_select">1샷</button><button class="shot_select">샷 추가</button></li>
+                <li><span>사이즈</span><button class="option_button size_select">스탠다드</button><button class="option_button size_select">그랜드</button></li>
+                <li><span>당도</span><button class="option_button sugar_select">보통</button><button class="option_button sugar_select">덜달게</button><button class="sugar_select">더달게</button></li>
+                <li><span>컵</span><button class="option_button cup_select">일회용</button><button class="option_button cup_select">머그컵</button></li>
+            </ul>
+
+            <div class = "option_footer">
+                <button>이전</button>
+                <button>담기</button>
+            </div>
+        </div>
+
+        <div class="option_design">
+            <h1>옵션선택</h1>
+            <ul>
+                <li><span>얼음</span><button class="option_button ice_select">많게</button><button class="option_button ice_select">적게</button><button class="ice_select">X</button></li>
+                <li><span>샷</span><button class="option_button shot_select">기본</button><button class="option_button shot_select">1샷</button><button class="shot_select">샷 추가</button></li>
+                <li><span>사이즈</span><button class="option_button size_select">스탠다드</button><button class="option_button size_select">그랜드</button></li>
+                <li><span>당도</span><button class="option_button sugar_select">보통</button><button class="option_button sugar_select">덜달게</button><button class="sugar_select">더달게</button></li>
+                <li><span>컵</span><button class="option_button cup_select">일회용</button><button class="option_button cup_select">머그컵</button></li>
+            </ul>
+
+            <div class = "option_footer">
+                <button class="display_clear">확인</button>
+            </div>
+        </div>
+
+        <div class="option_show">
+            <ul>
+                <li><span>얼음: </span><span class="option_check"></span></li>
+                <li><span>샷: </span><span class="option_check"></span></li>
+                <li><span>사이즈: </span><span class="option_check"></span></li>
+                <li><span>당도: </span><span class="option_check"></span></li>
+                <li><span>컵: </span><span class="option_check"></span></li>
+            </ul>
+        </div>
+
+
+    </section>
+
+    <section class="container_order">
+        <div class="exit_btn">이전</div>
+        <header>
+            <img class="header_logo" src="../img/paul_logo_1.png" alt="헤더로고">
+        </header>
+
+        <h1>주문내역</h1>
+
+        <div class="order_list_head">
+            <div class="order_menu">메뉴</div>
+            <div class="order_count">수량</div>
+            <div class="order_money">가격</div>
+        </div>
+        <div class="order_list_box">
+            <ul>
+            </ul>
+        </div>
+        <div class="point_display">포인트사용: <span class="now_use_point">0</span>원</div>
+        <ul class="total_area">
+            <li>총금액: </li>
+            <li><span class="result_money"></span><span>원</span></li>
+        </ul>
+
+        <h2>결제 방법</h2>
+
+        <div class="pay_box">신용카드</div>
+        <div class="pay_box">포인트 사용</div>
+
+        <!-- 결제페이지 -->
+
+        <div class="payment_box">
+            <img class="card_charge_img" src="../img/카드결제.png" alt="카드결제이미지">
+            <div class="charge_text">
+                <span>"결제하실 신용카드를<br>아래의 위치에 넣어주세요."</span>
+            </div>
+            <div class="small_charge_text">
+                <span>신용카드 결제가 완료될 때까지 카드를 빼지마세요.</span>
+            </div>
+            <button class="previous_btn">이전</button>
+        </div>
+
+        <!-- 영수증 출력 페이지 -->
+
+        <div class="receipt_output_box">
+            <img class="receipt_img" src="../img/영수증.png" alt="영수증출력이미지">
+            <div class="receipt_text">
+                <span>결제가 완료되었습니다.</span>
+            </div>
+            <div class="receipt_input_text">
+                <span>영수증을 출력하시겠습니까?</span>
+            </div>
+            <div class="select_footer">
+                <button>아니오</button>
+                <button>예</button>
+            </div>
+        </div>
+
+        <!-- 포인트 입력 페이지 -->
+
+        <div class="coupon_input_box">
+            <h2>포인트번호 입력</h2>
+            <article class="number_visible"></article>
+            <article class="number_input_box">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>010</div>
+                <div>0</div>
+                <div>X</div>
+            </article>
+            <div class="confirmation_box">
+                <button class="select_btn">취소</button>
+                <button class="select_btn">확인</button>
+            </div>
+        </div>
+
+
+        <!-- 포인트 사용페이지 -->
+
+        <div class="point_detailed">
+            <header>포인트 내역</header>
+            <button class="cancel_btn">X</button>
+            <article class="point_info_box">
+                <div class="point_accumulation_box">
+                    <span>누적 포인트&nbsp;&nbsp;&nbsp;:</span>
+                    <div class="accumulation_point">13,418</div>
+                </div>
+                <div class="use_point_box">
+                    <span>사용포인트&nbsp;&nbsp;&nbsp;:</span>
+                    <button class="point_minus_btn">-</button>
+                    <div class="use_point">1111</div>
+                    <button class="point_plus_btn">+</butoon>
+                </div>
+                <div class="residual_point_box">
+                    <span>잔여 포인트&nbsp;&nbsp;&nbsp;:</span>
+                    <div class="residual_point">418</div>
+                </div>
+            </article>
+            <div class="confirmation_box">
+                <button class="select_btn">사용하기</button>
+                <button class="select_btn">적립하기</button>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="../js/index.js"></script>
+</body>
+</html>

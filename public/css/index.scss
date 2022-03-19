@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+@mixin postion_attr { // 중앙정렬
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+$main_color : #E80A4D;
+
+.html, body {
+  background-color: #616161;
+}
+
+.wrap {
+  width: 700px;
+  height: 900px;
+  background-color: aquamarine;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  section {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* container_main_start */
+  .container_main {
+    position: relative;
+    background-image: url("../img/main_bg_0.jpg");
+    transition: all 2s;
+    // display: none;
+
+    .touch_box {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgba(0,0,0,0.2);
+      color: #fff;
+      font-size: 25px;
+      text-align: center;
+      line-height: 199px;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+  }
+  /* container_main_end */
+
+
+  .container_select {
+    display: none;
+    background-color: #fff;
+    position: relative;
+
+    header {
+      width: 100%;
+      height: 100px;
+      position: relative;
+
+      .header_logo {
+        position: absolute;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    nav {
+      width: 80%;
+      height: 50px;
+      margin: 0 auto;
+
+      ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          text-align: center;
+          line-height: 49px;
+          font-weight: 600;
+          font-size: 18px;
+          cursor: pointer;
+        }
+
+        .selected {
+          color: $main_color;
+        }
+
+        li:hover {
+          color: $main_color;
+        }
+      }
+    }
+
+    .menu_area {
+      position: relative;
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+
+      .menu_box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+      [class *= item_box] {
+          width: 180px;
+          height: 230px;
+
+          img {
+            width: 100%;
+            height: 180px;
+          }
+
+          .this_item_name {
+            width: 90%;
+            height: 25px;
+            font-size: 18px;
+            text-align: right;
+            line-height: 24px;
+          }
+
+          .this_item_price {
+            display: inline-block;
+            width: 80%;
+            height: 25px;
+            font-size: 18px;
+            text-align: right;
+            line-height: 24px;
+          }
+
+          .this_item_won {
+            display: inline-block;
+            width: 10%;
+            height: 25px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .item_new {
+        display: flex;
+        background-color: coral;
+      }
+
+      .item_coffee {
+        background-color: cadetblue;
+      }
+
+      .item_beverage {
+        background-color: chocolate;
+      }
+
+      .item_food {
+        background-color: cornflowerblue;
+      }
+
+      .item_ice_cream {
+        background-color: darkgoldenrod;
+      }
+    }
+
+    .pay_information {
+      width: 100%;
+      height: 250px;
+      display: flex;
+
+      .pay_left_area {
+        width: 80%;
+        height: 100%;
+
+        .pay_head {
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          line-height: 49px;
+          font-size: 25px;
+          font-weight: 600;
+          border-top: 1px solid #414141;
+          border-bottom: 1px solid #414141;
+        }
+
+        .coffee_list {
+          width: 100%;
+          height: 150px;
+          border-bottom: 1px solid #414141;
+          overflow: auto;
+
+          [class *= coffee_item] {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: flex;
+
+            .item_name {
+              width: 25%;
+              height: 100%;
+              text-align: right;
+            }
+
+            .item_option {
+              width: 10%;
+              height: 100%;
+
+              button {
+                width: 80%;
+                height: 40%;
+                background-color: $main_color;
+                border: 0;
+                color: #fff;
+                cursor: pointer;
+              }
+            }
+
+            .item_button {
+              width: 10%;
+              height: 100%;
+              line-height: 58px;
+
+              i {
+                border: 1px solid #000;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 28px;
+                cursor: pointer;
+              }
+            }
+
+            .item_count {
+              width: 5%;
+              height: 100%;
+              text-align: center;
+            }
+
+            .item_gae {
+              width: 5%;
+              height: 100%;
+            }
+
+            .item_money {
+              width: 10%;
+              height: 100%;
+              text-align: right;
+            }
+
+            .item_won {
+              width: 5%;
+              height: 100%;
+            }
+          }
+        }
+        .coffee_footer {
+          width: 100%;
+          height: 50px;
+          display: flex;
+
+          .footer_left {
+            width: 50%;
+            height: 100%;
+          }
+
+          .footer_right {
+            width: 50%;
+            height: 100%;
+          }
+
+          .footer_box {
+            display: flex;
+            text-align: center;
+            line-height: 49px;
+
+            .inner_left {
+              width: 30%;
+              height: 100%;
+            }
+
+            .inner_right {
+              width: 30%;
+              height: 100%;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .pay_right_area {
+        width: 20%;
+        height: 100%;
+        background-color: $main_color;
+        color: #fff;
+        text-align: center;
+        line-height: 249px;
+        font-size: 30px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+
+
+
+
+
+
+    // ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+    .option_design {
+      background-color: #fff;
+      position: absolute;
+      width: 500px;
+      height: 800px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: 2px solid #000;
+      display: none;
+
+      h1 {
+        height: 150px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 149px;
+      }
+
+      ul {
+        width: 100%;
+        height: 550px;
+        
+        li {
+          width: 100%;
+          height: 100px;
+          display: flex;
+
+
+          span {
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            text-align: center;
+            line-height: 99px;
+            font-size: 22px;
+          }
+
+          button {
+            width: 20%;
+            height: 60%;
+            border: 1px solid #000;
+            outline: 0;
+            margin-left: 25px;
+            margin-top: 20px;
+            font-size: 22px;
+            background-color: lightgray;
+          }
+        }
+      }
+
+      .option_footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+
+        button {
+          width: 150px;
+          height: 100%;
+          border: 0;
+          outline: 0;
+          font-size: 25px;
+          color: #fff;
+          background-color: #818181;
+          border-radius: 8px;
+        }
+
+        button:last-child {
+          background-color: $main_color;
+        }
+
+        .display_clear {
+          width: 300px;
+          height: 100%;
+          background-color: $main_color;
+        }
+      }
+    }
+
+    .option_show {
+      background-color: #fff;
+      width: 600px;
+      height: 50px;
+      position: absolute;
+      top:60%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border: 1px solid #000;
+      display: none;
+
+      ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        li {
+          width: 20%;
+          border: 1px solid #000;
+          display: flex;
+          text-align: center;
+          line-height: 49px;
+          font-size: 14px;
+  
+          span {
+            width: 50%;
+            display: block;
+          }
+  
+          .option_check {
+            width: 50%;
+            background-color: bisque;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// 주문내역창
+
+
+
+
+  .container_order {
+    background-color: #fff;
+    display: none;
+    position: relative;
+
+    .exit_btn {
+      width: 100px;
+      height: 50px;
+      background-color: #f08caa;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      text-align: center;
+      line-height: 49px;
+      font-size: 20px;
+      z-index: 10;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      position: relative;
+
+      .header_logo {
+        position: absolute;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    h1 {
+      width: 90%;
+      height: 100px;
+      font-size: 30px;
+      line-height: 99px;
+      margin: 0 auto;
+    }
+
+    .order_list_head {
+      width: 90%;
+      height: 50px;
+      background-color: lightgray;
+      margin: 0 auto;
+      display: flex;
+      text-align: center;
+      line-height: 49px;
+      font-size: 20px;
+
+      .order_menu {
+        width: 35%;
+        height: 100%;
+      }
+
+      .order_count {
+        width: 20%;
+        height: 100%;
+      }
+
+      .order_money {
+        width: 45%;
+        height: 100%;
+      }
+    }
+
+    .order_list_box > ul {
+      width: 90%;
+      height: 250px;
+      background-color: lightgray;
+      margin: 0 auto;
+      color: #000;
+      font-weight: 400;
+
+      li {
+        width: 100%;
+        height: 50px;
+        display: flex;
+
+        span {
+          display: block;
+          text-align: center;
+          line-height: 49px;
+        }
+
+        span:first-child {
+          width: 35%;
+        }
+        span:nth-child(2) {
+          width: 20%;
+        }
+        span:last-child {
+          width: 45%;
+
+          .item_total_money {
+            display: inline;
+            background-color: #f08caa;
+          }
+        }
+      }
+    }
+
+    .point_display {
+      width: 90%;
+      height: 20px;
+      margin: 0 auto;
+      text-align: right;
+      color: $main_color;
+      font-weight: 900;
+      margin-top: 30px;
+      visibility: hidden;
+
+      .now_use_point {
+        display: inline-block;
+        background-color: beige;
+        width: 100px;
+      }
+    }
+
+    .total_area {
+      width: 90%;
+      height: 100px;
+      margin: 0 auto;
+      display: flex;
+      color: $main_color;
+      font-weight: 900;
+
+      li {
+        width: 30%;
+        height: 100%;
+        text-align: right;
+        line-height: 99px;
+        font-size: 22px;
+
+        .result_money {
+          background-color: burlywood;
+        }
+      }
+
+      li:first-child {
+        width: 70%;
+      }
+    }
+
+    h2 {
+      width: 90%;
+      height: 70px;
+      margin: 0 auto;
+      line-height: 69px;
+    }
+
+    .pay_box {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      background-color: #E80A4D;
+      margin-left: 35px;
+      text-align: center;
+      line-height: 149px;
+    }
+
+    .pay_box:last-child {
+      background-color: #f08caa;
+    }
+
+    // 카드결제박스
+
+    .payment_box {
+      display: none;
+      width: 600px;
+      height: 550px;
+      background-color: white;
+      @include postion_attr();
+      border-radius: 10px;
+      border: 2px solid #000;
+      
+
+      .card_charge_img {
+        width: 300px;
+        height: 180px;
+        margin :70px 100px 30px 160px;
+        animation: card 3s infinite;
+        @keyframes card {
+          0% {
+            transform : translateX(100px);
+        }
+
+        50% {
+          transform : translateX(-100px);
+        }
+
+        100% {
+          transform : translateX(100px);
+          }
+        }
+      }
+      .charge_text {
+        width: 350px;
+        height: 100px;
+        //background-color: wheat;
+        text-align: center;
+        margin: 0 auto;
+        span{
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 50px;
+        }
+      }
+      .small_charge_text {
+        width: 200px;
+        height: 40px;
+        //background-color: aliceblue;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        line-height: 15px;
+        span {
+          font-size: 15px;
+          color: red;
+        }
+      }
+      .previous_btn {
+        width: 150px;
+        height: 50px;
+        border: 0;
+        outline: 0;
+        font-size: 25px;
+        color: black;
+        //background-color: lightgray;
+        border-radius: 5px;
+        margin : 10px 230px 0 220px;
+      }
+    }
+
+
+    // 영수증 박스 
+
+    .receipt_output_box {
+      width: 600px;
+      height: 550px;
+      background-color: white;
+      @include postion_attr();
+      border-radius: 10px;
+      border: 2px solid #000;
+      display: none;
+
+      .receipt_img {
+        width: 300px;
+        height: 300px;
+        //margin: 0 auto;
+        margin :0 100px 0rem 160px;
+        animation: receipt 3s infinite;
+        @keyframes receipt {
+          0% {
+            transform : translateY(30px);
+        }
+  
+        50% {
+          transform : translateY(-30px);
+        }
+  
+        100% {
+          transform : translateY(30px);
+          }
+        }
+      }
+      .receipt_text {
+        width: 350px;
+        height: 50px;
+        //background-color: wheat;
+        text-align: center;
+        margin: 0 auto;
+        margin-left: 140px;
+        margin-bottom: 10px;
+        display: block;
+        span{
+          font-size: 35px;
+          font-weight: bold;
+          color: red;
+        }
+      }
+      .receipt_input_text {
+        width: 400px;
+        height: 50px;
+        //background-color: wheat;
+        text-align: center;
+        margin: 0 auto;
+        margin-left: 110px;
+        margin-bottom: 50px;
+        display: block;
+        span {
+          font-size: 25px;
+          font-weight: bold;
+          color: #646464;
+        }
+      }
+      .select_footer {
+        width: 70%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 100px;
+        button {
+          width: 150px;
+          height: 100%;
+          border: 0;
+          outline: 0;
+          font-size: 25px;
+          color: black;
+          background-color: lightgray;
+          border-radius: 10px;
+        }
+      }
+      button:hover {
+        color: white;
+        background-color: red;
+        cursor: pointer;
+      }
+    }
+
+    // 포인트 입력박스
+
+    .coupon_input_box {
+      width: 600px;
+      height: 550px;
+      background-color: white;
+      @include postion_attr();
+      border-radius: 10px;
+      border: 2px solid #000;
+      display: none;
+
+      h2 {
+        width:100%;
+        height: 10%;
+        //background-color: red;
+        text-align: left;
+        line-height: 50px;
+        font-size: 30px;
+        padding-left: 30px;
+        margin-bottom: 20px;
+      }
+
+      .number_visible {
+        width: 300px;
+        height: 50px;
+        background-color: lightgray;
+        margin: 0 auto;
+        border-radius: 10px;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .number_input_box {
+        width: 275px;
+        height: 300px;
+        //background-color: #646464;
+        margin: 0 auto;
+        font-size: 0;
+        
+        div {
+          display: inline-block;
+          width: 90px;
+          height: 75px;
+          text-align: center;
+          font-size: 30px;
+          line-height: 75px;
+          //background-color: red;
+          border : 1px solid lightgray
+        }
+        div:hover {
+          color: white;
+          background-color: red;
+          cursor: pointer;
+        }
+      }
+      .confirmation_box {
+        width: 70%;
+        height: 50px;
+        //background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        margin-top: 20px;
+        margin-left: 100px;
+        
+
+        button {
+          width: 110px;
+          height: 100%;
+          border: 0;
+          outline: 0;
+          font-size: 25px;
+          color: black;
+          background-color: lightgray;
+          border-radius: 10px;
+          margin-left: 60px;
+        }
+      }
+      button:hover {
+        cursor: pointer;
+        color:white;
+        background-color: red;
+      }
+    }
+
+    //포인트사용박스
+    .point_detailed {
+      width: 600px;
+      height: 550px;
+      background-color: white;
+      @include postion_attr();
+      border-radius: 10px;
+      border: 2px solid #000;
+      display: none;
+  
+      header {
+        width: 100%;
+        height: 10%;
+        background-color: lightgray;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+      }
+      .cancel_btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 1.5%;
+        left: 92%;
+        font-size: 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+      }
+      .cancel_btn:hover {
+        cursor: pointer;
+        color: white;
+        background-color: red;
+      }
+      .point_info_box {
+        width: 80%;
+        height: 20%;
+        margin: 0 auto;
+        //background-color: lightgray;
+        border-radius: 5px;
+        margin-top: 130px;
+  
+        .point_accumulation_box {
+          width: 80%;
+          height: 33.33%;
+          //background-color: yellow;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          span {
+            width:40%;
+            height: 100%;
+            //background-color: blue;
+            font-size: 25px;
+          }
+          .accumulation_point {
+            width:30%;
+            height: 100%;
+            //background-color:aqua;
+            font-size: 25px;
+            text-align: center;
+            margin-left: -85px;
+          }
+        }
+        .use_point_box {
+          width: 80%;
+          height: 33.33%;
+          //background-color: yellow;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          span {
+            width:40%;
+            height: 100%;
+            //background-color: blue;
+            font-size: 25px;
+          }
+          button {
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            line-height: 1px;
+            border-radius: 5px;
+            
+          }
+          .use_point {
+            width: 80px;
+            height: 100%;
+            font-size: 25px;
+          }
+        }
+  
+        .residual_point_box {
+          width: 80%;
+          height: 33.33%;
+          //background-color: yellow;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          span {
+            width:40%;
+            height: 100%;
+            //background-color: blue;
+            font-size: 25px;
+            margin-left: 10px;
+          }
+          .residual_point {
+            width: 80px;
+            height: 100%;
+            font-size: 25px;
+            margin-left:-45px;
+          }
+        }
+  
+      }
+      .confirmation_box {
+        width: 80%;
+        height: 50px;
+        //background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        margin: 0 auto;
+        margin-top: 140px;
+        
+        button {
+          width: 155px;
+          height: 100%;
+          border: 0;
+          outline: 0;
+          font-size: 25px;
+          color: black;
+          background-color: lightgray;
+          border-radius: 10px;
+        }
+      }
+      button:hover {
+        cursor: pointer;
+        color:white;
+        background-color: red;
+      }
+    }
+  }
+}
