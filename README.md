@@ -18,7 +18,7 @@ POST http://localhost:3000/order
 
 ---
 ### TODO
-[O] GET http://localhost:3000/category
-[O] GET http://localhost:3000/category/{CATEGORY_ID}
-[O] GET http://localhost:3000/user?q={PHONE_NUMBER}
-[] POST http://localhost:3000/order
+- [x] GET http://localhost:3000/category
+- [x] GET http://localhost:3000/category/{CATEGORY_ID}
+- [x] GET http://localhost:3000/user?q={PHONE_NUMBER}
+- [ ] POST http://localhost:3000/order
