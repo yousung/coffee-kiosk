@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/coffee.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div class="head logo">LOGO</div>
+      </div>
+
+      <nav class="menu" id="cafe-menu"></nav>
+
+      <div class="food" id="food-list"></div>
+
+      <div class="order">
+        <div class="order__box">
+          <div class="order__title">주문내역</div>
+          <div class="order__list">
+            <div class="list">
+              <div class="item">
+                <div class="item name">아이스 아메리카노</div>
+                <button class="item plus">+</button>
+                <div class="item count">0</div>
+                <button class="item minus">-</button>
+                <button class="item remove">X</button>
+              </div>
+              <div class="total">
+                <div class="total count">
+                  <div class="title">총수량:</div>
+                  <div class="count">0개</div>
+                </div>
+                <div class="total count">
+                  <div class="title">총금액:</div>
+                  <div class="count">0원</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order__button">
+          <button>주문하기</button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/food.js"></script>
+  </body>
+</html>

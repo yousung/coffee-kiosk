@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  background: #616161;
+  width: 700px;
+  height: 900px;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  background: whitesmoke;
+  flex: 0.3;
+}
+
+.menu {
+  display: flex;
+  background: yellow;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0.3;
+}
+
+.food {
+  background: green;
+  flex: 5;
+}
+
+.order {
+  background: red;
+  display: flex;
+  flex-direction: row;
+
+  .order__button {
+    display: flex;
+    flex: 1;
+  }
+}
